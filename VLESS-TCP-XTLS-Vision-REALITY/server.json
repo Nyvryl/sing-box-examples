@@ -1,0 +1,51 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "sing-box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "tls",
+        "server": "tls://8.8.8.8"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+        "type": "vless",
+        "listen": "::",
+        "listen_port": 11451,
+        "tag": "vless_vison_reality",
+        "users":[
+            {
+            "name": "",
+            "uuid": "",
+            "flow": "xtls-rprx-vision"
+        }
+    ],
+    "tls": {
+        "enabled": true,
+        "server_name": "",
+        "reality":{
+            "enabled": true,
+            "handshake": {
+                "server": "",
+                "server_port": 443
+            },
+            "private_key": "",
+            "short_id": [
+                ""
+            ]
+        }
+    }
+    }
+  ],
+  "outbounds": [
+    {
+        "type": "direct"
+    }
+  ]
+}

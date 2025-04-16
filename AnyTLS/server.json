@@ -1,0 +1,43 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "sing-box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "tls",
+        "server": "tls://8.8.8.8"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+        "type": "anytls",
+        "tag": "anytls_in",
+        "listen": "::",
+        "listen_port": 11451,
+        "users": [
+            {
+                "name": "",
+                "password": ""
+            }
+        ],
+        "padding_scheme": [
+            
+        ],
+        "tls": {
+            "enabled": true,
+            "certificate_path": "",
+            "key_path": ""
+        }
+    }
+  ],
+  "outbounds": [
+    {
+        "type": "direct"
+    }
+  ]
+}

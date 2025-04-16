@@ -1,0 +1,38 @@
+{
+    "log": {
+        "disabled": false,
+        "level": "info",
+        "output": "sing-box.log",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "type": "tls",
+                "server": "tls://8.8.8.8"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "mixed",
+            "tag": "mixed_in",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "anytls",
+            "tag": "anytls_out",
+            "server": "",
+            "server_port": 11451,
+            "password": "",
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            }
+        }
+    ]
+
+}
