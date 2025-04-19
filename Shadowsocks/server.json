@@ -17,6 +17,8 @@
     {
         "type": "shadowsocks",
         "tag": "ss-in",
+        "listen": "::",
+        "listen_port": 11451,
         "method": "none",
         "password": ""
     }
