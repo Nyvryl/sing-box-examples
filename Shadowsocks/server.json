@@ -1,0 +1,29 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "sing-box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "tls",
+        "server": "tls://8.8.8.8"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+        "type": "shadowsocks",
+        "tag": "ss-in",
+        "method": "none",
+        "password": ""
+    }
+],
+  "outbounds":[
+    {
+        "type": "direct"
+    }
+  ]
+}
