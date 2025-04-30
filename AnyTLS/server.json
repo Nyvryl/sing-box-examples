@@ -9,7 +9,7 @@
     "servers": [
       {
         "type": "tls",
-        "server": "tls://8.8.8.8"
+        "server": "8.8.8.8"
       }
     ]
   },
